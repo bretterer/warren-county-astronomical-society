@@ -1,0 +1,73 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: name
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Your Name'
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              validate:
+                - required
+          -
+            handle: email
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Your Email'
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              validate:
+                - required
+          -
+            handle: subject
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Subject
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              validate:
+                - required
+          -
+            handle: message
+            field:
+              antlers: false
+              type: textarea
+              display: Message
+              icon: textarea
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              validate:
+                - required
+          -
+            handle: honeypot
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: honeypot
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: hidden
+              hide_display: false

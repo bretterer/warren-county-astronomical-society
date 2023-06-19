@@ -1,0 +1,31 @@
+title: 'Board of Directors'
+data:
+  title: 'Our Board of Directors'
+  body: 'Our board is made up of amateur astronomers who share a deep passion for the hobby. We are dedicated to organizing high-quality events and providing a top-notch educational experience to all those who share our love for astronomy.'
+  board:
+    -
+      id: litj9r0v
+      name: 'Chris Celek'
+      position: president
+      headshot: celek-photo-use.webp
+      type: new_set
+      enabled: true
+    -
+      id: litjandx
+      name: 'Brian Retterer'
+      position: vp
+      headshot: brian-retterer.jpeg
+      type: new_set
+      enabled: true
+    -
+      id: litjcb83
+      name: 'Chuck Fairbanks'
+      position: secretary
+      type: new_set
+      enabled: true
+    -
+      id: litjczxk
+      name: 'Gary Batton'
+      position: treasurer
+      type: new_set
+      enabled: true

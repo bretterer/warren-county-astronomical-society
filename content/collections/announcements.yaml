@@ -1,0 +1,16 @@
+title: Announcements
+template: announcements/show
+layout: layout
+mount: 7f5f8b96-2cb7-46b2-97b5-316a853c68e6
+revisions: false
+route: '{parent_uri}/announcemtns/{slug}'
+sort_dir: asc
+default_status: draft
+date_behavior:
+  past: public
+  future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true
