@@ -5,7 +5,7 @@ title: 'Warren County Astronomical Society'
 template: home
 author: d6e25483-2e8c-426c-b135-7953edec5c45
 updated_by: d6e25483-2e8c-426c-b135-7953edec5c45
-updated_at: 1687217005
+updated_at: 1687218169
 images:
   -
     id: litk9isd
