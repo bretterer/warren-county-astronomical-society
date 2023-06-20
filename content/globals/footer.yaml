@@ -1,0 +1,25 @@
+title: Footer
+data:
+  copy: '&copy; 2023 Warren County Astronomical Society. All rights reserved.'
+  social:
+    -
+      id: litnwuic
+      icon_field: facebook
+      social_link: 'https://www.facebook.com/WCAstroSociety'
+      type: new_set
+      enabled: true
+      title: Facebook
+    -
+      id: litnxhon
+      icon_field: facebook-messenger
+      social_link: 'https://m.me/WCAstroSociety'
+      type: new_set
+      enabled: true
+      title: Messenger
+    -
+      id: litnzdkh
+      icon_field: envelope
+      social_link: 'mailto:info@wcas-oh.org'
+      type: new_set
+      enabled: true
+      title: Email

@@ -1,16 +1,41 @@
 ---
-title: Home
 id: home
+blueprint: home
+title: 'Warren County Astronomical Society'
 template: home
-blueprint: pages
+author: d6e25483-2e8c-426c-b135-7953edec5c45
+updated_by: d6e25483-2e8c-426c-b135-7953edec5c45
+updated_at: 1687218169
+images:
+  -
+    id: litk9isd
+    image: 353444457_650527780440172_3886305133855738256_n.jpeg
+    type: images
+    enabled: true
+  -
+    id: litkbcbf
+    image: 346759212_937542074123563_8190706695220265231_n.jpeg
+    type: images
+    enabled: true
+  -
+    id: litkbfxo
+    image: 290290320_5327770883925234_7805878425725336477_n.jpeg
+    type: images
+    enabled: true
+  -
+    id: litkbjjx
+    image: 311002463_5614370958598557_4638122792072587631_n.jpeg
+    type: images
+    enabled: true
+  -
+    id: litkbmi0
+    image: 351006033_807898937428532_8116167874872046529_n.jpeg
+    type: images
+    enabled: true
 ---
-## Welcome to your brand new Statamic site!
+Welcome to the Warren County Astronomical Society Website
+This society is organized by volunteers for the enjoyment of astronomy for educational and scientific purposes and is located at Hisey Park, a dark sky area between Lebanon and Waynesville in Warren County, Ohio.
 
-Not sure where to do next? Here are a few ideas, but feel free to explore in your own way, in your own time.
+Our members operate the Fred Bay Observatory and share it with the public on behalf of the Warren County Parks Department. We also help operate the Rachel A. Hutzel Observatory at Camp Joy.
 
-- [Jump into the Control Panel](/cp) and edit this page or begin setting up your own collections and blueprints.
-- [Head to the docs](https://statamic.dev) and learn how Statamic works.
-- [Watch some Statamic videos](https://youtube.com/statamic) on YouTube.
-- [Join our Discord chat](https://statamic.com/discord) and meet thousands of other Statamic developers.
-- [Start a discussion](https://github.com/statamic/cms/discussions) and get answers to your questions.
-- [Star Statamic on Github](https://github.com/statamic/cms) if you enjoy using it!
+You'll find information about our upcoming events and how to become a member on our website. Follow the tabs above for more details.

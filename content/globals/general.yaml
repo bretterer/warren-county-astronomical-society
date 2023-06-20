@@ -1,0 +1,17 @@
+title: General
+data:
+  dark_sky_locations:
+    -
+      id: lj34lul0
+      location: 'Fred Bay Observatory'
+      url: 'https://www.cleardarksky.com/c/FrdByObOHkey.html'
+      image: 'https://www.cleardarksky.com/c/FrdByObOHcsk.gif?c=1684822'
+      type: new_set
+      enabled: true
+    -
+      id: lj34mpha
+      location: 'Rachel A. Hutzel Observatory'
+      url: 'https://www.cleardarksky.com/c/RchHtzObOHkey.html'
+      image: 'https://www.cleardarksky.com/c/RchHtzObOHcsk.gif?c=1645233'
+      type: new_set
+      enabled: true

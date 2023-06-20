@@ -1,0 +1,161 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: 'Publish Details'
+        fields:
+          -
+            handle: skip_automation
+            field:
+              default: false
+              type: toggle
+              display: 'Skip Automation'
+              icon: toggle
+              instructions: 'We automatically publish and unpublish announcements based on the dates, Use this feature to skip the automation for this announcement'
+              listable: hidden
+              instructions_position: below
+              visibility: visible
+              hide_display: false
+          -
+            handle: publish_on
+            field:
+              mode: single
+              inline: false
+              full_width: false
+              columns: 1
+              rows: 1
+              time_enabled: false
+              time_seconds_enabled: false
+              type: date
+              display: 'Publish On'
+              icon: date
+              instructions: 'This is the date the announcement will automatically be published'
+              width: 50
+              listable: hidden
+              instructions_position: below
+              visibility: visible
+              hide_display: false
+              if:
+                skip_automation: 'equals false'
+          -
+            handle: unpublish_on
+            field:
+              mode: single
+              inline: false
+              full_width: false
+              columns: 1
+              rows: 1
+              time_enabled: false
+              time_seconds_enabled: false
+              type: date
+              display: 'Unpublish On'
+              icon: date
+              instructions: 'This announcement will be unpublished at the end of this date'
+              width: 50
+              listable: hidden
+              instructions_position: below
+              visibility: visible
+              hide_display: false
+              validate:
+                - 'after_or_equal:start_date'
+              if:
+                skip_automation: 'equals false'
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: content
+            field:
+              buttons:
+                - h2
+                - h3
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - image
+                - quote
+                - anchor
+                - table
+              smart_typography: false
+              save_html: false
+              inline: false
+              toolbar_mode: fixed
+              reading_time: true
+              fullscreen: true
+              allow_source: true
+              enable_input_rules: true
+              enable_paste_rules: true
+              remove_empty_nodes: false
+              antlers: false
+              link_noopener: false
+              link_noreferrer: false
+              target_blank: false
+              always_show_set_button: false
+              collapse: false
+              previews: true
+              type: bard
+              display: Content
+              icon: bard
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              container: assets
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+      -
+        display: 'Banner Info'
+        instructions: 'This is for the banner on the home page'
+        fields:
+          -
+            handle: announcement_type
+            field:
+              options:
+                member_event: 'Member Event'
+                public_event: 'Public Event'
+                meeting_notice: Meeting
+              taggable: true
+              push_tags: false
+              multiple: false
+              clearable: false
+              searchable: true
+              cast_booleans: false
+              default: public_event
+              type: select
+              display: 'Announcement Type'
+              icon: select
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: announcement_title
+            field:
+              input_type: text
+              character_limit: 50
+              antlers: false
+              type: text
+              display: 'Announcement Title'
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+title: Announcement

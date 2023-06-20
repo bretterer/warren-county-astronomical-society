@@ -1,0 +1,20 @@
+title: Articles
+template: articles/show
+layout: layout
+mount: 9f32e33e-e0b7-454c-be8d-a17702c4ec19
+revisions: false
+route: '/articles/{slug}'
+date: true
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true
+  -
+    label: Index
+    url: /articles
+    refresh: true
