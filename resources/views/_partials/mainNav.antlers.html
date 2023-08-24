@@ -1,0 +1,167 @@
+<nav class="bg-gray-800"
+     x-data="{menuOpen: false, userOpen: false}">
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="relative flex h-16 items-center justify-between">
+            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                <!-- Mobile menu button-->
+                <button type="button"
+                        class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                        aria-controls="mobile-menu"
+                        aria-expanded="false"
+                        @click="menuOpen = !menuOpen">
+                    <span class="sr-only">Open main menu</span>
+
+                    <svg class="h-6 w-6"
+                         fill="none"
+                         viewBox="0 0 24 24"
+                         stroke-width="1.5"
+                         stroke="currentColor"
+                         aria-hidden="true"
+                         x-show="menuOpen==false"
+                         x-cloak>
+                        <path stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+
+                    <svg class="h-6 w-6"
+                         fill="none"
+                         viewBox="0 0 24 24"
+                         stroke-width="1.5"
+                         stroke="currentColor"
+                         aria-hidden="true"
+                         x-show="menuOpen==true"
+                         x-cloak>
+                        <path stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start text-gray-200">
+                <div class="flex flex-shrink-0 items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         xml:space="preserve"
+                         class="h-16 w-auto py-2"
+                         viewBox="0 0 336.8267 221.2933"
+                         fill="currentColor">
+                        <path d="m302.18 342.859-48.508-162.461h-57.793l-42.473 125.09h-4.644l-42.699-125.09H48.5078L0 342.859h43.6328l33.1836-129.5h6.7266l41.32 129.5h52.45l41.308-129.5h6.274l33.179 129.5h44.106M434.285 242.141l-27.613 73.339h-9.516l-27.613-73.339zm9.746-25.77h-84.234l-13.703-35.973h-43.86l68 162.461h63.36l68-162.461h-43.86l-13.703 35.973M651.785 286.699v10.903c0 17.648-7.652 19.039-22.976 19.039h-65.672v-50.832h65.672c11.836 0 22.976 2.793 22.976 20.89zm41.778-61.738-.235-44.563h-39.91v40.622c0 15.781-11.609 18.8-23.215 18.8h-67.066v-59.422h-39.922v162.461h116.043c36.203 0 52.453-7.89 52.453-39.218V289.02c0-23.68-10.449-30.399-25.305-31.571v-.918c14.16 0 27.157-9.293 27.157-31.57M849.563 286.699v10.903c0 17.648-7.661 19.039-22.981 19.039h-65.676v-50.832h65.676c11.836 0 22.981 2.793 22.981 20.89zm41.777-61.738-.235-44.563h-39.914v40.622c0 15.781-11.613 18.8-23.211 18.8h-67.074v-59.422h-39.922v162.461h116.047c36.199 0 52.449-7.89 52.449-39.218V289.02c0-23.68-10.449-30.399-25.3-31.571v-.918c14.16 0 27.16-9.293 27.16-31.57M1059.87 207.332v-26.934H918.762v162.461h136.698v-26.218h-96.776V277.18h88.886v-25.758h-88.886v-44.09h101.186M1273.41 342.859V180.398h-57.79l-90.98 130.442h-3.48V180.398h-36.9v162.461h57.79l90.51-128.109h3.94v128.109h36.91M1530.85 231.93c0-44.559-26.92-55.008-83.09-55.008-58.95 0-88.66 9.277-88.66 58.019v53.379c0 49.442 29.25 58.02 89.12 58.02 56.4 0 81.7-7.66 81.7-48.5v-10.219h-37.83v8.129c0 17.871-13.47 23.91-43.87 23.91-35.51 0-48.74-5.808-48.74-32.039v-51.75c0-24.601 14.4-31.332 48.28-31.332 32.95 0 44.79 7.199 44.79 28.551v12.992h38.3V231.93M1598.64 235.871c0-24.601 12.77-30.871 47.82-30.871 35.04 0 48.03 6.27 48.03 30.871v52.219c0 25.07-12.99 30.871-48.03 30.871-35.05 0-47.82-5.801-47.82-30.871zm47.82 110.469c59.17 0 88.42-8.809 88.42-58.02v-53.379c0-49.203-29.25-58.019-88.42-58.019-58.95 0-88.2 8.816-88.2 58.019v53.379c0 49.211 29.25 58.02 88.2 58.02M1935.2 234.941c0-47.812-29.01-58.019-86.33-58.019-57.56 0-86.57 10.207-86.57 58.019v107.918h39.92V234.941c0-22.742 13.45-30.402 46.65-30.402 32.95 0 46.41 7.891 46.41 30.402v107.918h39.92V234.941M2151.78 342.859V180.398h-57.8l-90.97 130.442h-3.48V180.398h-36.9v162.461h57.79l90.51-128.109h3.94v128.109h36.91M2332.37 316.641h-59.41V180.398h-39.91v136.243h-59.42v26.218h158.74v-26.218M2526.19 342.859l-68.92-107.687v-54.774h-39.93v54.774l-68.92 107.687h46.65l38.75-74.039h6.74l38.52 74.039h47.11M757.566 33.0195l-13.98 37.1211h-4.816l-13.985-37.1211Zm4.934-13.039h-42.645l-6.933-18.2188h-22.207l34.433 82.25h32.071l34.422-82.25h-22.207L762.5 19.9805M818.262 25.0313c0-7.8711 6.465-11.1719 24.093-11.1719 16.793 0 23.497 3.1797 23.497 10.2304v1.2891c0 8.4609-13.157 9.6406-34.543 13.4024-21.504 3.7578-31.016 7.8671-31.016 22.5468v2.0039c0 16.7969 14.441 22.4375 42.297 22.4375 31.48 0 41.59-6.4609 41.59-20.2109v-5.0469h-19.032v1.4102c0 9.0469-5.531 11.1562-21.972 11.1562-16.446 0-22.563-1.9883-22.563-8.2187v-1.1797c0-8.8086 7.641-8.8086 30.903-12.918 18.562-3.2929 34.785-6.2304 34.785-23.6211v-2.9297C886.301 7.7617 873.02 0 841.77 0c-29.141 0-43.364 6.9414-43.364 21.7383v6.4609h19.856v-3.1679M974.141 70.7305h-30.078V1.7617h-20.215v68.9688H893.77v13.2812h80.371V70.7305M1050.11 55.5781v5.5235c0 8.9297-3.88 9.6289-11.63 9.6289h-33.26V45h33.26c5.99 0 11.63 1.4102 11.63 10.5781zm21.15-31.2578-.12-22.5586h-20.2V22.332c0 7.9766-5.88 9.5078-11.75 9.5078h-33.97V1.7618h-20.2v82.2499h58.75c18.33 0 26.55-3.9922 26.55-19.8633V56.75c0-11.9805-5.29-15.3906-12.81-15.9805v-.4687c7.17 0 13.75-4.6992 13.75-15.9805M1105.54 29.8516c0-12.461 6.45-15.6328 24.2-15.6328 17.74 0 24.31 3.1718 24.31 15.6328v26.4297c0 12.6875-6.57 15.6289-24.31 15.6289-17.75 0-24.2-2.9414-24.2-15.6289zm24.2 55.9179c29.96 0 44.76-4.4609 44.76-29.3711V29.3789C1174.5 4.4609 1159.7 0 1129.74 0c-29.85 0-44.65 4.461-44.65 29.3789v27.0195c0 24.9102 14.8 29.3711 44.65 29.3711M1284.07 84.0117v-82.25h-29.26l-46.05 66.0274h-1.77V1.7617h-18.68v82.25h29.26l45.82-64.8633h2v64.8633h18.68M1318.33 29.8516c0-12.461 6.46-15.6328 24.2-15.6328s24.32 3.1718 24.32 15.6328v26.4297c0 12.6875-6.58 15.6289-24.32 15.6289-17.74 0-24.2-2.9414-24.2-15.6289zm24.2 55.9179c29.96 0 44.77-4.4609 44.77-29.3711V29.3789C1387.3 4.4609 1372.49 0 1342.53 0c-29.84 0-44.65 4.461-44.65 29.3789v27.0195c0 24.9102 14.81 29.3711 44.65 29.3711M1532.59 1.7617h-19.62v64.3867h-2.24l-32.89-64.3867h-21.74l-33.13 64.3867h-2.35V1.7617h-19.51v82.25h32.55l31.96-64.3906h2.58l31.84 64.3906h32.55v-82.25M1566.59 84.0117v-82.25h-20.2v82.25h20.2M1667.39 27.8516C1667.39 5.2891 1653.77 0 1625.33 0c-29.84 0-44.88 4.6992-44.88 29.3789v27.0195c0 25.0235 14.8 29.3711 45.12 29.3711 28.55 0 41.35-3.8711 41.35-24.5507v-5.168h-19.15v4.1094c0 9.0507-6.81 12.1015-22.2 12.1015-17.98 0-24.67-2.9414-24.67-16.2109V29.8516c0-12.461 7.27-15.8633 24.43-15.8633 16.69 0 22.68 3.6328 22.68 14.4414v6.5898h19.38v-7.1679M1740.78 33.0195l-13.98 37.1211h-4.82L1708 33.0195Zm4.93-13.039h-42.64l-6.94-18.2188h-22.2l34.43 82.25h32.07l34.42-82.25h-22.2l-6.94 18.2188M1854.35 15.3906V1.7617h-68.62v82.25h20.22V15.3906h48.4M1915.98 25.0313c0-7.8711 6.46-11.1719 24.09-11.1719 16.8 0 23.49 3.1797 23.49 10.2304v1.2891c0 8.4609-13.15 9.6406-34.54 13.4024-21.5 3.7578-31.01 7.8671-31.01 22.5468v2.0039c0 16.7969 14.44 22.4375 42.29 22.4375 31.49 0 41.59-6.4609 41.59-20.2109v-5.0469h-19.03v1.4102c0 9.0469-5.53 11.1562-21.97 11.1562-16.45 0-22.56-1.9883-22.56-8.2187v-1.1797c0-8.8086 7.64-8.8086 30.9-12.918 18.56-3.2929 34.78-6.2304 34.78-23.6211v-2.9297C1984.01 7.7617 1970.73 0 1939.48 0c-29.14 0-43.36 6.9414-43.36 21.7383v6.4609h19.86v-3.1679M2018.28 29.8516c0-12.461 6.46-15.6328 24.2-15.6328s24.32 3.1718 24.32 15.6328v26.4297c0 12.6875-6.58 15.6289-24.32 15.6289-17.74 0-24.2-2.9414-24.2-15.6289zm24.2 55.9179c29.96 0 44.77-4.4609 44.77-29.3711V29.3789C2087.25 4.4609 2072.44 0 2042.48 0c-29.84 0-44.65 4.461-44.65 29.3789v27.0195c0 24.9102 14.81 29.3711 44.65 29.3711M2188 27.8516C2188 5.2891 2174.38 0 2145.94 0c-29.85 0-44.89 4.6992-44.89 29.3789v27.0195c0 25.0235 14.81 29.3711 45.12 29.3711 28.56 0 41.36-3.8711 41.36-24.5507v-5.168h-19.15v4.1094c0 9.0507-6.82 12.1015-22.21 12.1015-17.98 0-24.67-2.9414-24.67-16.2109V29.8516c0-12.461 7.28-15.8633 24.44-15.8633 16.69 0 22.67 3.6328 22.67 14.4414v6.5898H2188v-7.1679M2222.04 84.0117v-82.25h-20.21v82.25h20.21M2307.31 15.3906V1.7617h-71.43v82.25h69.21V70.7305h-49.01V50.7617h45V37.7188h-45V15.3906h51.23M2395.4 70.7305h-30.08V1.7617h-20.21v68.9688h-30.08v13.2812h80.37V70.7305M2493.47 84.0117l-34.9-54.5234V1.7617h-20.2v27.7266l-34.9 54.5234h23.62l19.62-37.4804h3.41l19.5 37.4804h23.85"
+                              transform="matrix(.13333 0 0 -.13333 0 221.2933)" />
+                        <path d="M1562.95 1213.01c38.75-5.29 69.31-11.26 93.05-16.97-.34-3.57-.58-7.17-.58-10.83 0-36.35 17.11-68.85 44.02-90.82-1.98-6.37-3.78-12.82-5.6-19.26-27.91 17.01-49.55 30.21-58.18 35.52-36.71 22.59-196.94 119.3-72.71 102.36zm620-761.881c-146.08 76.422-790.99 413.734-926.79 483.418-165.04 84.703-546.984 322.723-638.558 397.943-31.622 25.97-132.95 114.03-109.305 156.67 20.187 36.4 103.863 26.52 107.433 26.09l.282-2.24c-14.117.7-84.789 7.19-103.34-26.28-17.301-31.19 44.5-98.14 108.101-150.37 91.411-75.09 472.817-312.77 637.677-397.36 133.97-68.754 763.36-397.93 920.58-480.18l-111.37 227.602c-211.77 96-677.05 331.328-827.3 415.998-221.15 124.62-381.172 220.71-451.758 308.71-40.821 50.88-13.176 58.35 18.824 60.23 31.996 1.88 97.879-14.12 97.879-14.12s-30.774-.39-56.469-.94c-44.234-.94-29.176-33.68-.941-65.88 41.882-47.77 194.605-138.71 247.525-171.29 117.71-72.48 373.28-205.61 597.65-317.181 138.29-68.765 264.72-128.324 344.68-165.39l-95.27 187.273s-104.83 63.734-192.75 117.258c71.8 282.47 300.15 543.91 587.14 618.59-221.87-38.43-415.81-172.32-537.79-355.97-5.75.77-11.57 1.3-17.54 1.3-47.79 0-89.36-25.26-110.76-62.48-81.67 27.36-324.28 108.41-369.24 120.83-98.82 27.29-770.821 243.77-843.294 138.35-70.105-101.98 506.824-458.82 982.584-697.409 28.93-14.504 126.6-67.043 243.35-130.309 50.64-227.601 193.91-406.191 400.6-488.851-162.12 90.437-278.16 259.507-329.44 450.25 216.46-117.539 461.96-251.789 461.96-251.789l-34.35 67.527"
+                              transform="matrix(.13333 0 0 -.13333 0 221.2933)" />
+                    </svg>
+                </div>
+                <div class="hidden sm:ml-6 sm:block">
+                    <div class="flex h-full space-x-4 items-center">
+                        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                        {{ nav:main_navigation }}
+                        <a href="{{ url }}"
+                           class="{{ active ? ' bg-gray-900 text-white ' : 'text-gray-300 hover:bg-gray-700 hover:text-white ' }} rounded-md px-3 py-2 text-sm font-medium">{{
+                            title }}</a>
+
+                        {{ /nav:main_navigation }}
+                    </div>
+                </div>
+            </div>
+            <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                <button type="button"
+                        class="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                    <span class="sr-only">View notifications</span>
+                    <svg class="h-6 w-6"
+                         fill="none"
+                         viewBox="0 0 24 24"
+                         stroke-width="1.5"
+                         stroke="currentColor"
+                         aria-hidden="true">
+                        <path stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+                    </svg>
+                </button>
+
+                <!-- Profile dropdown -->
+                {{if logged_in}}
+                {{ user }}
+                <div class="relative ml-3"
+                     @click.away="userOpen = false">
+                    <div>
+                        <button type="button"
+                                class="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                                id="user-menu-button"
+                                aria-expanded="false"
+                                aria-haspopup="true">
+                            <span class="sr-only">Open user menu</span>
+                            <img class="h-8 w-8 rounded-full"
+                                 src="{{ avatar }}"
+                                 alt="{{ name }}"
+                                 @click="userOpen = !userOpen">
+                        </button>
+                    </div>
+
+                    <div class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                         role="menu"
+                         aria-orientation="vertical"
+                         aria-labelledby="user-menu-button"
+                         tabindex="-1"
+                         x-show="userOpen"
+                         x-transition:enter="transition ease-out duration-100"
+                         x-transition:enter-start="transform opacity-0 scale-95"
+                         x-transition:enter-end="transform opacity-100 scale-100"
+                         x-transition:leave="transition ease-in duration-75"
+                         x-transition:leave-start="transform opacity-100 scale-100"
+                         x-transition:leave-end="transform opacity-0 scale-95"
+                         x-cloak>
+                        <!-- Active: "bg-gray-100", Not Active: "" -->
+                        <a href="#"
+                           class="block px-4 py-2 text-sm text-gray-700"
+                           role="menuitem"
+                           tabindex="-1"
+                           id="user-menu-item-0">Your Membership</a>
+                        {{ if user:can do="access cp" }}
+                        <a href="/cp"
+                           class="block px-4 py-2 text-sm text-gray-700"
+                           role="menuitem"
+                           tabindex="-1"
+                           id="user-menu-item-1">Control Panel</a>
+                        {{ /if }}
+                        <a href="{{ user:logout_url redirect='/' }}"
+                           class="block px-4 py-2 text-sm text-gray-700"
+                           role="menuitem"
+                           tabindex="-1"
+                           id="user-menu-item-2">Sign out</a>
+                    </div>
+                </div>
+                {{ /user }}
+                {{ else }}
+                <div class="hidden lg:flex lg:flex-1 lg:justify-end ml-4">
+                    <a href="/account/login"
+                       class="text-sm font-semibold leading-6 text-gray-200">Log in <span
+                              aria-hidden="true">&rarr;</span></a>
+                </div>
+                {{ /if}}
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="sm:hidden"
+         id="mobile-menu"
+         x-show="menuOpen"
+         x-transition:enter="transition ease-out duration-100"
+         x-transition:enter-start="transform opacity-0 scale-95"
+         x-transition:enter-end="transform opacity-100 scale-100"
+         x-transition:leave="transition ease-in duration-75"
+         x-transition:leave-start="transform opacity-100 scale-100"
+         x-transition:leave-end="transform opacity-0 scale-95">
+        <div class="space-y-1 px-2 pb-3 pt-2">
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+            {{ nav:main_navigation }}
+            <a href="{{ url }}"
+               class="{{ active ? ' bg-gray-900 text-white ' : 'text-gray-300 hover:bg-gray-700 hover:text-white ' }} block rounded-md px-3 py-2 text-base font-medium">{{
+                title }}</a>
+
+            {{ /nav:main_navigation }}
+
+        </div>
+    </div>
+</nav>

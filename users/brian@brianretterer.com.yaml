@@ -1,5 +1,12 @@
 name: 'Brian Retterer'
 super: true
+groups:
+  - board
+  - member
+  - volunteer
+roles:
+  - administrator
+membership_level: lifetime
 id: d6e25483-2e8c-426c-b135-7953edec5c45
 password_hash: $2y$10$EAQrxL3Z1CpOGePRsqgnq.rlcXwWK6J7wt5Yscssw4gUUqjfLWn4.
 preferences:
@@ -8,3 +15,10 @@ preferences:
       after_save: continue_editing
     pages:
       after_save: continue_editing
+  users:
+    columns:
+      - email
+      - name
+      - groups
+      - membership_level
+      - last_login

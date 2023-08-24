@@ -1,0 +1,198 @@
+<div class="py-10">
+    <section>
+        <div class="mx-auto max-w-7xl px-6 py-12">
+            <h1 class="px-6 sm:px-0 text-2xl font-semibold text-gray-700">
+                Membership Level
+            </h1>
+            <div class="mt-3">
+                <div class="bg-white sm:rounded-lg shadow-sm">
+                    <div>
+                        <div class="flex justify-between">
+                            <h2 class="pl-6 pt-6 text-xl font-semibold text-gray-700">
+                                {{ subscription:plan:nickname }}
+                            </h2>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <div class="mt-2 text-md font-semibold text-gray-700"><span>${{ subscription:plan:amount |
+                                    HumanReadableAmount}}</span> / {{ subscription:plan:interval}}
+                            </div>
+                            <div class="mt-3 max-w-xl text-sm text-gray-600">
+                                {{ membership_plans:yearly_plans }}
+                                {{ charge:price plan="{stripe_plan}" }}
+                                    {{ if id == subscription:plan:id }}
+                                    {{ description }}
+                                    {{ /if }}
+                                {{ /charge:price }}
+                                {{ /membership_plans:yearly_plans }}
+                            </div>
+
+                            {{ if cancelMembership != null}}
+                            <div class="mt-3 text-xs text-gray-500"><!----> <span class="flex justify-items-center"><svg
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         fill="none"
+                                         viewBox="0 0 24 24"
+                                         stroke-width="1.5"
+                                         stroke="currentColor"
+                                         class="inline-block mr-1 w-4 h-4">
+                                        <path stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.678 48.678 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3l-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 003.7 3.7 48.656 48.656 0 007.324 0 4.006 4.006 0 003.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3l-3 3">
+                                        </path>
+                                    </svg>
+                                    Your payment method will be charged automatically for each billing period.
+                                </span></div>
+                            {{ else }}
+                            <div class="mt-3 text-xs text-gray-500"><!----> <span class="flex justify-items-center"><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="inline-block mr-1 w-4 h-4">
+                               <path stroke-linecap="round"
+                                     stroke-linejoin="round"
+                                     d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.678 48.678 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3l-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 003.7 3.7 48.656 48.656 0 007.324 0 4.006 4.006 0 003.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3l-3 3">
+                               </path>
+                           </svg>
+                           Your membership will be canceled at the end of the billing period ({{ subscription:cancel_at | format('F j, Y') }})
+                       </span></div>
+                            {{ /if }}
+                        </div>
+                    </div>
+                    {{ if cancelMembership != null}}
+                    <div class="px-6 pb-4"><a href="{{ subUpdate }}"
+                           class="inline-flex items-center px-4 py-2 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest focus:outline-none transition ease-in-out duration-150 bg-gray-500">
+                            Change Subscription Plan
+                        </a></div>
+                    {{ else }}
+                    <div class="px-6 pb-4"><a href="{{ portal }}"
+                        class="inline-flex items-center px-4 py-2 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest focus:outline-none transition ease-in-out duration-150 bg-gray-500">
+                         Resume Membership
+                     </a></div>
+                    {{/if}}
+                </div>
+            </div> <!---->
+        </div>
+    </section>
+
+    <section>
+        <div class="mx-auto max-w-7xl px-6 py-12">
+            <h2 class="px-6 sm:px-0 text-2xl font-semibold text-gray-700">
+                Payment Methods
+            </h2>
+            <div class="mt-3">
+                <div class="bg-white sm:rounded-lg shadow-sm overflow-hidden">
+                    <div class="p-6">
+                        <ul role="list"
+                            class="border border-gray-100 rounded-md divide-y divide-gray-200">
+                            {{ paymentMethods }}
+                            <li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
+                                <div class="w-0 flex-1 flex items-center"><svg xmlns="http://www.w3.org/2000/svg"
+                                         fill="none"
+                                         viewBox="0 0 24 24"
+                                         stroke-width="1.5"
+                                         stroke="currentColor"
+                                         class="flex-shrink-0 h-5 w-5 text-gray-600">
+                                        <path stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z">
+                                        </path>
+                                    </svg>
+                                    <div class="ml-3 flex-1 w-0 truncate">
+                                        {{ card:brand | title }}
+                                        •••• {{ card:last4 }}
+
+                                        {{ if default }}
+                                        <span
+                                              class="inline-flex items-center ml-2 px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                                            Default
+                                        </span>
+                                        {{ /if }}
+                                        <br>
+                                        <span class="text-xs text-gray-500">
+                                            Expires {{ card:exp_month }}/{{ card:exp_year }}
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="ml-4 flex-shrink-0"></div>
+                            </li>
+                            {{ /paymentMethods }}
+
+                        </ul> <a href="{{ addPaymentMethod }}"
+                           class="inline-flex items-center px-4 py-2 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest focus:outline-none transition ease-in-out duration-150 mt-4 bg-gray-500">
+                            Add Payment Method
+                        </a> <!---->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{ if cancelMembership != null}}
+    <section>
+        <div class="mx-auto max-w-7xl px-6 py-12">
+            <h2 class="px-6 sm:px-0 text-2xl font-semibold text-gray-700">
+                Cancel Subscription
+            </h2>
+            <div class="mt-3">
+                <div class="p-6 bg-white sm:rounded-lg shadow-sm">
+                    <div class="max-w-2xl text-sm text-gray-600">
+                        You may cancel your subscription at any time. Once your subscription has been cancelled, you
+                        will have the option to resume the subscription until the end of your current billing cycle.
+                    </div> <a href="{{ cancelMembership:url}}"
+                       class="inline-flex items-center px-4 py-2 bg-white border border-gray-300 rounded-md font-semibold text-xs text-gray-700 uppercase tracking-widest shadow-sm hover:text-gray-500 focus:outline-none focus:ring active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150 mt-4">
+                        Cancel Subscription
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    {{ /if }}
+
+
+
+    <section>
+        <div class="mx-auto max-w-7xl px-6 py-12">
+            <h2 class="px-6 sm:px-0 text-2xl font-semibold text-gray-700">
+                Receipts
+            </h2>
+            <div class="mt-3">
+                <div class="bg-white sm:rounded-lg shadow-sm divide-y divide-gray-100">
+                    {{ invoices}}
+                    <div class="flex items-center px-6 py-4">
+                        <div class="text-sm w-full">
+                            {{ created | format('F j, Y')}}
+                        </div>
+                        <div class="text-sm w-full">
+                            <div class="px-2">
+                                ${{ amount_due | HumanReadableAmount}}
+                            </div>
+                        </div>
+                        <div class="text-sm w-full">
+                              <span
+                                  class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                                {{status | title}}
+                            </span></div>
+                        <div class="text-sm text-gray-700 shrink-0 flex items-center justify-end">
+                            <div class="w-52 text-right"><!----> <a
+                                   href="{{ hosted_invoice_url }}"
+                                   target="_blank"
+                                   title="Download Receipt"
+                                   class="underline hover:text-gray-500"><svg xmlns="http://www.w3.org/2000/svg"
+                                         fill="none"
+                                         viewBox="0 0 24 24"
+                                         stroke="currentColor"
+                                         stroke-width="2"
+                                         class="h-5 w-5 inline">
+                                        <path stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                                    </svg></a></div>
+                        </div>
+                    </div>
+                    {{ /invoices }}
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,35 @@
+title: 'Membership Plans'
+data:
+  yearly_plans:
+    -
+      id: llek1i48
+      stripe_plan: price_1NfXWpBM4bHr9bNAe8mQFqaN
+      description: 'For you and you family at the same address'
+      featured: false
+      type: plan
+      enabled: true
+    -
+      id: llek1obj
+      stripe_plan: price_1NfXXKBM4bHr9bNAc7Cx8a0B
+      featured: false
+      type: plan
+      enabled: true
+    -
+      id: llek1rja
+      stripe_plan: price_1NfXXjBM4bHr9bNAmyy48yl5
+      featured: false
+      type: plan
+      enabled: true
+    -
+      id: llek1w1r
+      stripe_plan: price_1NfXY2BM4bHr9bNAPcWQEar3
+      featured: false
+      type: plan
+      enabled: true
+  lifetime_plan:
+    -
+      id: ljhxjje6
+      lifetime_plan: price_1NOWCiBM4bHr9bNAKT15rx66
+      type: plan
+      enabled: true
+      tagline: 'Pay once, be a member forever'

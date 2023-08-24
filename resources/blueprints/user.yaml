@@ -1,29 +1,121 @@
 title: User
-fields:
-  -
-    handle: name
-    field:
-      type: text
-      display: Name
-  -
-    handle: email
-    field:
-      type: text
-      input: email
-      display: Email Address
-  -
-    handle: roles
-    field:
-      type: user_roles
-      width: 50
-  -
-    handle: groups
-    field:
-      type: user_groups
-      width: 50
-  -
-    handle: avatar
-    field:
-      type: assets
-      max_files: 1
-      container: assets
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: name
+            field:
+              type: text
+              display: Name
+          -
+            handle: email
+            field:
+              type: text
+              input_type: email
+              display: 'Email Address'
+              listable: true
+              input: email
+          -
+            handle: roles
+            field:
+              type: user_roles
+              mode: select
+              width: 50
+              listable: true
+              filterable: false
+          -
+            handle: groups
+            field:
+              type: user_groups
+              mode: select
+              width: 50
+              listable: true
+              filterable: false
+          -
+            handle: avatar
+            field:
+              type: assets
+              max_files: 1
+              container: assets
+      -
+        display: 'Membership Information'
+        fields:
+          -
+            handle: street_address
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Street Address'
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: city
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: City
+              icon: text
+              width: 33
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: state
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: State
+              icon: text
+              width: 33
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: zip
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Zip
+              icon: text
+              width: 33
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: phone_number
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Phone Number'
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: list_of_family_members
+            field:
+              antlers: false
+              type: textarea
+              display: 'List of family members'
+              icon: textarea
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            import: membership_plans

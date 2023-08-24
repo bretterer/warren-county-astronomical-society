@@ -1,0 +1,8 @@
+name: 'Test member'
+groups:
+  - member
+membership_level: family
+primary_member: d6e25483-2e8c-426c-b135-7953edec5c45
+super: false
+id: 1a66028c-991e-4e2a-9ce8-c6eb0794ea4e
+password_hash: $2y$10$dwMUYD/..1TKxyWEbDCcleqWssR6i/41ac0ZlFUYavwdcbe2q1iWe

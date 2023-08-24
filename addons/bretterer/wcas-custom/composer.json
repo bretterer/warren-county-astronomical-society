@@ -1,0 +1,19 @@
+{
+    "name": "bretterer/wcas-custom",
+    "autoload": {
+        "psr-4": {
+            "Bretterer\\WcasCustom\\": "src"
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "Wcas Custom",
+            "description": "Wcas Custom addon"
+        },
+        "laravel": {
+            "providers": [
+                "Bretterer\\WcasCustom\\ServiceProvider"
+            ]
+        }
+    }
+}
