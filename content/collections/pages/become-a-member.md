@@ -3,8 +3,8 @@ id: 1842ef28-e43e-492b-80ca-564f95d87f3b
 blueprint: page
 title: 'Become a Member'
 author: d6e25483-2e8c-426c-b135-7953edec5c45
-updated_by: d6e25483-2e8c-426c-b135-7953edec5c45
-updated_at: 1687213373
+updated_by: 1
+updated_at: 1692141374
 callout: "Support the Warren County Astronomical Society and unlock extraordinary stargazing opportunities at two distinct observatories. By becoming a member, you can experience breathtaking views of our celestial wonders while contributing to the society's mission"
 featured_image: stargazing.jpeg
 content:
@@ -255,44 +255,6 @@ content:
         marks:
           -
             type: bold
-        text: 'Already a member:'
-      -
-        type: text
-        marks:
-          -
-            type: link
-            attrs:
-              href: 'https://www.paypal.com/donate/?hosted_button_id=FTVN8GSBRPWFC'
-              rel: null
-              target: _blank
-              title: null
-          -
-            type: bold
-        text: ' Renew '
-      -
-        type: text
-        marks:
-          -
-            type: link
-            attrs:
-              href: 'https://www.paypal.com/donate/?hosted_button_id=FTVN8GSBRPWFC'
-              rel: null
-              target: null
-              title: null
-          -
-            type: bold
-        text: "your membership fees online here.\_"
-  -
-    type: heading
-    attrs:
-      textAlign: '-webkit-left'
-      level: 4
-    content:
-      -
-        type: text
-        marks:
-          -
-            type: bold
         text: "Ready to join:\_"
       -
         type: text
@@ -300,76 +262,11 @@ content:
           -
             type: link
             attrs:
-              href: 'https://docs.google.com/forms/d/e/1FAIpQLSc2kwakAtVjB306Vr87z13bNL_bhYH0N-2F1R5QylxY9sRD0w/viewform'
+              href: /join
               rel: null
-              target: _blank
+              target: null
               title: null
           -
             type: bold
         text: 'Sign up here.'
-  -
-    type: horizontalRule
-  -
-    type: paragraph
-    attrs:
-      textAlign: '-webkit-left'
-    content:
-      -
-        type: text
-        text: "\_"
-  -
-    type: paragraph
-    attrs:
-      textAlign: '-webkit-left'
-    content:
-      -
-        type: text
-        text: "Or, you can mail a check\_payable to the "
-      -
-        type: text
-        marks:
-          -
-            type: bold
-        text: 'Warren County Astronomical Society Fund'
-      -
-        type: text
-        text: ' for the amount of your membership donation to:'
-  -
-    type: paragraph
-    attrs:
-      textAlign: '-webkit-left'
-    content:
-      -
-        type: text
-        marks:
-          -
-            type: bold
-        text: 'The Warren County Foundation'
-  -
-    type: paragraph
-    attrs:
-      textAlign: '-webkit-left'
-    content:
-      -
-        type: text
-        text: '118 E Main St.'
-  -
-    type: paragraph
-    attrs:
-      textAlign: '-webkit-left'
-    content:
-      -
-        type: text
-        text: 'Lebanon, OH 45036'
-  -
-    type: paragraph
-    attrs:
-      textAlign: '-webkit-left'
-    content:
-      -
-        type: text
-        marks:
-          -
-            type: italic
-        text: "The Warren County Foundation is a 501(c)3 organization and your donation may be tax\_deductible."
 ---

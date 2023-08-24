@@ -1,4 +1,10 @@
-# admin:
-#   title: Administrators
-#   roles:
-#     - admin
+board:
+  title: Board
+officer:
+  title: Officer
+volunteer:
+  title: Volunteer
+member:
+  title: Member
+friend:
+  title: Friend

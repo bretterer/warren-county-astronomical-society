@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'repository' => 'file',
+    'repository' => 'eloquent',
 
     'repositories' => [
 
@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'avatars' => 'initials',
+    'avatars' => 'gravatar',
 
     /*
     |--------------------------------------------------------------------------
@@ -58,7 +58,7 @@ return [
     */
 
     'new_user_roles' => [
-        //
+
     ],
 
     /*
@@ -72,7 +72,7 @@ return [
     */
 
     'new_user_groups' => [
-        //
+        'friend'
     ],
 
     /*
