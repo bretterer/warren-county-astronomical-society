@@ -31,18 +31,18 @@ Route::name('wcas.')->group(function () {
 });
 
 
- Route::get('test', function () {
-    // Set your secret key. Remember to switch to your live secret key in production.
-   // See your keys here: https://dashboard.stripe.com/apikeys
-   $stripe = new \Stripe\StripeClient(config('cashier.secret'));
+//  Route::get('test', function () {
+//     // Set your secret key. Remember to switch to your live secret key in production.
+//    // See your keys here: https://dashboard.stripe.com/apikeys
+//    $stripe = new \Stripe\StripeClient(config('cashier.secret'));
 
 
-   $session = $stripe->billingPortal->sessions->create([
-      'customer' => Auth::user()->stripe_id,
-    ]);
+//    $session = $stripe->billingPortal->sessions->create([
+//       'customer' => Auth::user()->stripe_id,
+//     ]);
 
-    return redirect($session->url);
- });
+//     return redirect($session->url);
+//  });
 
 Route::name('account.')->group(function() {
    Route::group(['prefix' => 'account'], function () {

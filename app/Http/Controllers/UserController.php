@@ -63,7 +63,7 @@ class UserController extends Controller
         $plan = \Stripe\Plan::retrieve($request->plan_id);
         $user->newSubscription($plan->nickname, $plan->id)->create($request->payment_method);
 
-        // return redirect('/account');
+        return redirect('/account/billing');
     }
 
     public function billing()
