@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 
 use Statamic\Http\Middleware\AuthGuard;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\TerminalController;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,6 +49,16 @@ Route::name('account.')->group(function() {
    Route::group(['prefix' => 'account'], function () {
       Route::group(['middleware' => [AuthGuard::class]], function () {
          Route::get('billing', [UserController::class, 'billing'])->name('billing');
+      });
+   });
+});
+
+
+
+Route::name('terminal.')->group(function() {
+   Route::group(['prefix' => 'terminal'], function () {
+      Route::group(['middleware' => [AuthGuard::class]], function () {
+         Route::get('/', [TerminalController::class, 'index'])->name('index');
       });
    });
 });

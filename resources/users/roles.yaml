@@ -61,6 +61,5 @@ administrator:
     - 'mb view members'
     - 'mb edit members'
     - 'mb create members'
-    - 'mb view members'
-    - 'mb edit members'
-    - 'mb create members'
+    - 'configure form fields'
+    - 'access default site'
